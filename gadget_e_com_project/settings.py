@@ -6,7 +6,8 @@ SECRET_KEY = 'django-insecure-x4#q^2*zyqqammfvez9nd7zh_h=$4aiv^$h3@f(-s+ozrwc-k^
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://goriber-gadget.onrender.com','https://*.127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
