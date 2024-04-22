@@ -8,6 +8,11 @@ class CoverAndglass(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = "CoverAndglass"
+        verbose_name_plural = "cover and glass "
+   
 
 class productBrandModel(models.Model):
     """ brand  models """
@@ -17,6 +22,10 @@ class productBrandModel(models.Model):
 
     def __str__(self):
         return self.name
+    class Meta:
+        verbose_name = "productBrandModel"
+        verbose_name_plural = "ProductBrand "
+   
 
 
 
@@ -37,3 +46,6 @@ class CoverAndGlassProduct(models.Model):
  
     class Meta:
         ordering = ["price"]
+        verbose_name = "CoverAndGlassProduct"
+        verbose_name_plural = "Cover And Glass Products "
+       

@@ -85,6 +85,10 @@ class LaptobSpecificaionModel(models.Model):
 
     def __str__(self) -> str:
         return self.model
+    class Meta:
+        verbose_name = "Laptob Specificaion Model"
+        verbose_name_plural = "Laptob Specificaions"
+
 
 
 class LaptobDescriptionModel(models.Model):
@@ -93,7 +97,9 @@ class LaptobDescriptionModel(models.Model):
 
     def __str__(self):
         return self.description
-    
+    class Meta:
+        verbose_name = "Laptob Description Model"
+        verbose_name_plural = "Laptop Descriptions"
 
 class laptob_and_destop_productAdd (models.Model):
     """  laptob_and_destop """

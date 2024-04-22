@@ -9,6 +9,12 @@ class fitnessAndwearable(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = "Fitness and Wearable"
+        verbose_name_plural = "Fitness and Wearables"
+   
+
 
 class watachAndaccessories(models.Model):
     """ watch and accessories models """
@@ -18,12 +24,13 @@ class watachAndaccessories(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = "Watch And Accessories"
+        verbose_name_plural = "Watch And Accessories"
+
 
     
-STATUS = (
-    ("In Stock ", "In Stock"),
-    ("Out of Stock","Out of Stock"),
-)
 
 
 class FitnessSpecificaionModel(models.Model):
@@ -36,8 +43,9 @@ class FitnessSpecificaionModel(models.Model):
     
     def __str__(self) -> str:
         return self.model
-
-
+    class Meta:
+        verbose_name = "Fitness Specification Model"
+        verbose_name_plural = "Fitness Specifications"
 
 
 
@@ -47,7 +55,21 @@ class FitnessDescriptionModel(models.Model):
 
     def __str__(self):
         return self.description
+    class Meta:
+        verbose_name = "Fitness Description Model"
+        verbose_name_plural = "Fitness Descriptions"
+
+
+
+
     
+STATUS = (
+    ("In Stock ", "In Stock"),
+    ("Out of Stock","Out of Stock"),
+)
+
+
+
 
 class Fitness_and_wearable_Product(models.Model):
     """ cover and glass product """
@@ -64,3 +86,6 @@ class Fitness_and_wearable_Product(models.Model):
     status = models.CharField(choices =STATUS,blank=True,null=True,max_length=40)
     class Meta:
         ordering = ["price"]
+        verbose_name = "Fitness_and_wearable_Product"
+        verbose_name_plural = "Fitness and wearable Products "
+    

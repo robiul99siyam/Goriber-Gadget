@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import powerAndaccessories,cableAndinternconnect,PowerProductBrand,cableAndinternconnectProductAdd
+from .models import powerAndaccessories,cableAndinternconnect,PowerProductBrand,cableAndinternconnectProductAdd,powerAndaccessoriesDescriptionModel,PowerAndaccessoriesSpecificaionModel
 
 model_register = [powerAndaccessories,cableAndinternconnect,PowerProductBrand]
 
@@ -12,3 +12,5 @@ for model in model_register:
 
 
 admin.site.register(cableAndinternconnectProductAdd)
+admin.site.register(powerAndaccessoriesDescriptionModel)
+admin.site.register(PowerAndaccessoriesSpecificaionModel)

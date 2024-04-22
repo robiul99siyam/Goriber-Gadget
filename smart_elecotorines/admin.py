@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import smartAndelectines,mediaAndStreams,productBrand,smart_elecotorinesProductAdd
+from .models import smartAndelectines,mediaAndStreams,productBrand,smart_elecotorinesProductAdd,SmartDescriptionModel,SmartSpecificaionModel
 
 model_register = [smartAndelectines,mediaAndStreams,productBrand]
 
@@ -12,3 +12,5 @@ for model in model_register:
 
 
 admin.site.register(smart_elecotorinesProductAdd)
+admin.site.register(SmartDescriptionModel)
+admin.site.register(SmartSpecificaionModel)

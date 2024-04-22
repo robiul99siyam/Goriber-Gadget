@@ -9,6 +9,9 @@ class phoneAndtablet(models.Model):
 
     def __str__(self) :
         return self.name
+    class Meta:
+        verbose_name = "phone And tablet"
+        verbose_name_plural = "phone And Tablet"
 
 class ipadAndTAB (models.Model):
     """ ipad models """
@@ -60,7 +63,9 @@ class SpecificationModel (models.Model):
 
     def __str__(self) -> str:
         return self.model
-
+    class Meta:
+        verbose_name = "Specification Model  "
+        verbose_name_plural = " Specifications"
 
 class DescriptionModel(models.Model):
     image = models.ImageField(upload_to="phone_and_tablet/media/image",blank=True,null=True)
@@ -68,6 +73,10 @@ class DescriptionModel(models.Model):
 
     def __str__(self):
         return self.description
+    class Meta:
+        verbose_name = "Description Model "
+        verbose_name_plural = " Descriptions"
+
 
 class phone_and_tabletProductadd (models.Model):
     """  phone_and_tabletProductadd """
@@ -82,9 +91,11 @@ class phone_and_tabletProductadd (models.Model):
     status = models.CharField(choices =STATUS,blank=True,null=True,max_length=40)
     SpecificationModel = models.ForeignKey(SpecificationModel,on_delete=models.CASCADE,null=True,blank=True,related_name="SpecificationModel")
     DescriptionModel = models.ForeignKey(DescriptionModel,on_delete=models.CASCADE,blank=True,null=True,related_name='DescriptionModel')
-    class Meta:
-        ordering = ["price"]
 
     def __str__(self) -> str:
         return self.name
 
+    class Meta:
+        ordering = ["price"]
+        verbose_name = "Phone and Tablet Product Add"
+        verbose_name_plural = "Phone and Tablet Product Adds"

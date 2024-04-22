@@ -8,6 +8,10 @@ class smartAndelectines(models.Model):
     slug = models.SlugField(max_length=200,null=True,blank = True)
     def __str__(self) :
         return self.name
+    class Meta:
+        verbose_name = "smartAndelectines"
+        verbose_name_plural = "Smart And electines"
+
     
 
 
@@ -52,6 +56,9 @@ class SmartSpecificaionModel(models.Model):
 
     def __str__(self) -> str:
         return self.model
+    class Meta:
+        verbose_name = "Smart Specificaion Model"
+        verbose_name_plural = "Smart Specificaions"
 
 
 class SmartDescriptionModel(models.Model):
@@ -60,6 +67,11 @@ class SmartDescriptionModel(models.Model):
 
     def __str__(self):
         return self.description
+    
+    class Meta:
+        verbose_name = "Smart Description Model"
+        verbose_name_plural = "Smart Descriptions "
+
     
 
 class smart_elecotorinesProductAdd (models.Model):

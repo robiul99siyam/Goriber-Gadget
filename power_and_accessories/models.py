@@ -12,6 +12,12 @@ class powerAndaccessories(models.Model):
         return self.name
 
 
+    class Meta:
+        verbose_name = "power And accessories"
+        verbose_name_plural = "power And Accessories"
+
+
+
 class cableAndinternconnect  (models.Model):
     """ cable and internconnect models """
 
@@ -21,6 +27,9 @@ class cableAndinternconnect  (models.Model):
 
     def __str__(self) :
         return self.name
+    class Meta:
+        verbose_name = "cable And internconnect"
+        verbose_name_plural = " cable And Internconnect"
     
 
 
@@ -59,6 +68,10 @@ class PowerAndaccessoriesSpecificaionModel(models.Model):
 
     def __str__(self) -> str:
         return self.model
+    class Meta:
+        verbose_name = "PowerAndaccessoriesSpecificaionModel"
+        verbose_name_plural = "Power And Accessories Specificaions"
+
 
 
 class powerAndaccessoriesDescriptionModel(models.Model):
@@ -67,6 +80,11 @@ class powerAndaccessoriesDescriptionModel(models.Model):
 
     def __str__(self):
         return self.description
+    class Meta:
+        verbose_name = "powerAndaccessoriesDescriptionModel"
+        verbose_name_plural = "Power And Accessories Descriptions"
+
+
     
 
 
@@ -85,4 +103,5 @@ class cableAndinternconnectProductAdd (models.Model):
     status = models.CharField(choices =STATUS,blank=True,null=True,max_length=40)
     class Meta:
         ordering = ["price"]
-
+        verbose_name = "cable And internconnect ProductAdd"
+        verbose_name_plural = "Cable And Internconnect ProductAdds"
