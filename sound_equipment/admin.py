@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SoundAndEquipment,speaker,soundSpeckerProductAdd
+from .models import SoundAndEquipment,speaker,soundSpeckerProductAdd,soundDescriptionModel,soundSpecificaionModel
 
 model_register = [SoundAndEquipment,speaker]
 
@@ -13,3 +13,5 @@ for model in model_register:
 
 
 admin.site.register(soundSpeckerProductAdd)
+admin.site.register(soundSpecificaionModel)
+admin.site.register(soundDescriptionModel)

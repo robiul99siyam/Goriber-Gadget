@@ -10,7 +10,8 @@ router.register("BussinessClassLoptob",views.BusineesClassLoptobViewsets)
 router.register("GamingLaptob",views.GamingLaptobViewsets)
 router.register('laptobAndDestopAdd',views.laptob_and_destop_productAddViewsets)
 router.register('LaptobSpecfication',views.LaptobSpecifationViewset)
-router.register('laptobAndDestopAdd',views.LaptobDescriptionViewset)
+router.register('LaptobDescription',views.LaptobDescriptionViewset)
+
 
 
 urlpatterns = [

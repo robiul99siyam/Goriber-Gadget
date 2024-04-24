@@ -82,7 +82,6 @@ class Fitness_and_wearable_Product(models.Model):
     fitnessAndwearable = models.ForeignKey(fitnessAndwearable,on_delete=models.CASCADE,null =True,blank=True)
     productBrandModel = models.ForeignKey(productBrandModel,on_delete=models.CASCADE,null=True,blank=True)
     FitnessSpecificaionModel = models.ForeignKey(FitnessSpecificaionModel,on_delete=models.CASCADE,null=True,blank=True)
-    FitnessDescriptionModel = models.ForeignKey(FitnessDescriptionModel,on_delete=models.CASCADE,null=True,blank=True)
     status = models.CharField(choices =STATUS,blank=True,null=True,max_length=40)
     class Meta:
         ordering = ["price"]

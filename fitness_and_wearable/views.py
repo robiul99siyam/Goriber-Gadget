@@ -4,7 +4,7 @@ from .models import fitnessAndwearable,Fitness_and_wearable_Product,watachAndacc
 from .serializer import fitnessAndwearableSerializers,Fitness_and_wearable_ProductSerializers,watachAndaccessoriesSerializers,FitnessDescriptionSerializer,FitnessSpceificationSerailzer
 from rest_framework import viewsets
 from rest_framework import filters
-# from conver_and_glass.views import All_pagination
+from conver_and_glass.views import All_pagination
 from django.http import Http404
 
 class fitnessAndWearableViewset (viewsets.ModelViewSet):
@@ -14,6 +14,10 @@ class fitnessAndWearableViewset (viewsets.ModelViewSet):
 class watachAndaccessoriesViewset (viewsets.ModelViewSet):
     queryset = watachAndaccessories.objects.all()
     serializer_class = watachAndaccessoriesSerializers
+
+class FitnessSpecficationViewset(viewsets.ModelViewSet):
+    queryset = FitnessSpecificaionModel.objects.all()
+    serializer_class = FitnessSpceificationSerailzer
 
 
 class FitnessDescriptionViewsets(viewsets.ModelViewSet):
@@ -25,7 +29,7 @@ class Fitness_and_wearable_ProductViewset (viewsets.ModelViewSet):
     serializer_class = Fitness_and_wearable_ProductSerializers
     filter_backends = [filters.SearchFilter]
     search_fields = ['productBrand__name', 'fitnessAndwearable__name,watachAndaccessories__name']
-    # pagination_class = All_pagination
+    pagination_class = All_pagination
 
     def get_queryset(self):
         params_id = self.request.query_params.get("query_params")

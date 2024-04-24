@@ -42,6 +42,12 @@ class soundSpecificaionModel(models.Model):
 
     def __str__(self) -> str:
         return self.model
+    
+    class Meta:
+        verbose_name = "soundSpecificaionModel"
+        verbose_name_plural = "sound And  Specificaion"
+
+
 
 
 class soundDescriptionModel(models.Model):
@@ -50,6 +56,11 @@ class soundDescriptionModel(models.Model):
 
     def __str__(self):
         return self.description
+    class Meta:
+            verbose_name = "soundDescriptionModel"
+            verbose_name_plural = "sound And Descriptions"
+
+
     
 
     

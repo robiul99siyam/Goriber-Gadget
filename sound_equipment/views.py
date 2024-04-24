@@ -25,12 +25,12 @@ class speckerViewset(viewsets.ModelViewSet):
 
 class SoundAndEquipmentViewset(viewsets.ModelViewSet):
     queryset = SoundAndEquipment.objects.all()
-    serializer_class = soundSpeckerProductAddSerializer
+    serializer_class = soundAndEquipmentSerializer
 
 
 class soundSpeckerProductAddViewset(viewsets.ModelViewSet):
     queryset = soundSpeckerProductAdd.objects.all()
-    serializer_class = soundAndEquipmentSerializer
+    serializer_class = soundSpeckerProductAddSerializer
     pagination_class = All_pagination
     filter_backends = [filters.SearchFilter]
     search_fields = ["SoundAndEquipment__name","speaker__name","productBrand__name"]

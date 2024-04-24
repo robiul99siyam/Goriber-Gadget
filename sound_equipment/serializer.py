@@ -10,7 +10,7 @@ class SoundSpecificationSerializer(serializers.ModelSerializer):
 
 class SoundDescriptionSerializer(serializers.ModelSerializer):
     class Meta:
-        model = soundSpecificaionModel
+        model = soundDescriptionModel
         fields = '__all__'
 
         

@@ -92,7 +92,7 @@ class LaptobSpecificaionModel(models.Model):
 
 
 class LaptobDescriptionModel(models.Model):
-    image = models.ImageField(upload_to="phone_and_tablet/media/image",blank=True,null=True)
+    image = models.ImageField(upload_to="loptob_and_desktop/media/image",blank=True,null=True)
     description = models.TextField()
 
     def __str__(self):
