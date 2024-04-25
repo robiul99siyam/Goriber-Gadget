@@ -28,19 +28,20 @@ class smartAndelectinesViewsets(viewsets.ModelViewSet):
     queryset = smartAndelectines.objects.all()
     serializer_class = smartAndelectinesSerilizer
 
+    
 class smart_elecotorinesProductAddViewsets(viewsets.ModelViewSet):
     queryset = smart_elecotorinesProductAdd.objects.all()
     serializer_class = smart_elecotorinesProductAddSerilizer
     pagination_class = All_pagination
     filter_backends = [filters.SearchFilter]
-    search_fields = ['smartAndelectines__name','mediaAndStreams__name',"productBrand__name",'name']
+    search_fields = ['smartAndelectines__name', 'mediaAndStreams__name', 'productBrand__name', 'name']
 
     def get_queryset(self):
-        params_id = self.request.params_query.get("params_id")
+        params_id = self.request.query_params.get("params_id")
 
         if params_id is not None:
             try:
                 return smart_elecotorinesProductAdd.objects.filter(id=params_id)
             except smart_elecotorinesProductAdd.DoesNotExist:
-                return Http404("smart elcotornies  does not exist for the given params_id")
+                raise Http404("smart elcotornies does not exist for the given params_id")
         return smart_elecotorinesProductAdd.objects.all()

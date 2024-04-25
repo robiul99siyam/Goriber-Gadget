@@ -6,10 +6,10 @@ from . import views
 router = DefaultRouter()
 router.register("smart_elecotorinesProductAdd",views. smart_elecotorinesProductAddViewsets)
 router.register("product/brand",views.ProductBrandViewsets)
-router.register(" mediaAndStreams",views.mediaAndStreamsViewsets)
-router.register(" smartAndelectines",views.smartAndelectinesViewsets)
-router.register(" smartSpecification",views.SmartSpecificationViewsets)
-router.register(" smartDescription",views.SmartDescription)
+router.register("mediaAndStreams",views.mediaAndStreamsViewsets)
+router.register("smartAndelectines",views.smartAndelectinesViewsets)
+router.register("smartSpecification",views.SmartSpecificationViewsets)
+router.register("smartDescription",views.SmartDescription)
 
 
 urlpatterns = [
