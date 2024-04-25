@@ -75,7 +75,7 @@ class PowerAndaccessoriesSpecificaionModel(models.Model):
 
 
 class powerAndaccessoriesDescriptionModel(models.Model):
-    image = models.ImageField(upload_to="phone_and_tablet/media/image",blank=True,null=True)
+    image = models.ImageField(upload_to="power_and_accessories/media/image",blank=True,null=True)
     description = models.TextField()
 
     def __str__(self):

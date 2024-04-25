@@ -62,7 +62,7 @@ class SmartSpecificaionModel(models.Model):
 
 
 class SmartDescriptionModel(models.Model):
-    image = models.ImageField(upload_to="phone_and_tablet/media/image",blank=True,null=True)
+    image = models.ImageField(upload_to="smart_elecotorines/media/image",blank=True,null=True)
     description = models.TextField()
 
     def __str__(self):

@@ -15,5 +15,6 @@ urlpatterns = [
     path('sound_equipment/',include("sound_equipment.urls")),
     path('uesr_Devices/',include("uesr_Devices.urls")),
     path('all_product/',include("all_product.urls")),
+    path('some_of_product/',include("some_of_product.urls")),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

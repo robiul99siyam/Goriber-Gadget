@@ -22,7 +22,7 @@ INSTALLED_APPS = [
 
 
     # internal 
-    "Blog",
+    
     "conver_and_glass",
     "fitness_and_wearable",
     "loptob_and_desktop",
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "uesr_Devices",
     "all_product",
     'drf_multiple_model',
+    "some_of_product",
 
     #Extranal 
     "rest_framework",

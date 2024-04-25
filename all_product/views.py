@@ -1,9 +1,7 @@
 from rest_framework import filters,generics
 from drf_multiple_model.views import ObjectMultipleModelAPIView
 from django.http import Http404
-from .models import BennerSection
-from .serializer import BennerSctionSerialzer
-from rest_framework import viewsets
+
 ''""" all model add """
 from conver_and_glass.models import CoverAndGlassProduct
 from fitness_and_wearable.models import Fitness_and_wearable_Product
@@ -49,7 +47,3 @@ class TextViewApi(ObjectMultipleModelAPIView):
     search_fields = ['name', 'price', 'product_code']  
 
 
-
-class BennerViewset(viewsets.ModelViewSet):
-    queryset = BennerSection.objects.all()
-    serializer_class = BennerSctionSerialzer
