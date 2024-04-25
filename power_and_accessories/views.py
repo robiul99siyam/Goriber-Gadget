@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import powerAndaccessories,PowerProductBrand,cableAndinternconnectProductAdd,powerAndaccessoriesDescriptionModel,PowerAndaccessoriesSpecificaionModel
+from .models import powerAndaccessories,PowerProductBrand,cableAndinternconnectProductAdd,powerAndaccessoriesDescriptionModel,PowerAndaccessoriesSpecificaionModel,cableAndinternconnect
 from .serializer import powerAndaccessrorieSerailzer,productBrandSerailzer,cableAndinternconnectProductAddSerailzer,powerAndaccessoriesDescriptionSerailzer,PowerAndaccessoriesSpecificaionSerializer
 from rest_framework import filters
 from conver_and_glass.views import All_pagination
@@ -12,7 +12,7 @@ class powerAndaccessoriesDescriptionViewsets(viewsets.ModelViewSet):
 
 class PowerAndaccessoriesSpecificaionViewsets(viewsets.ModelViewSet):
     queryset = PowerAndaccessoriesSpecificaionModel.objects.all()
-    serializer_class = powerAndaccessoriesDescriptionSerailzer
+    serializer_class = PowerAndaccessoriesSpecificaionSerializer
 
 
 class powerAndaccessoriesViewset(viewsets.ModelViewSet):

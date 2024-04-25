@@ -1,6 +1,11 @@
-from .models import GamingAndLoptob,BusineesClassLoptob,ultraBook,ProductBrand,laptob_and_destop_productAdd,LaptobDescriptionModel,LaptobSpecificaionModel
+from .models import GamingAndLoptob,BusineesClassLoptob,ultraBook,ProductBrand,laptob_and_destop_productAdd,LaptobDescriptionModel,LaptobSpecificaionModel,Macbook
 from rest_framework import serializers
 
+
+class MackBookSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Macbook
+        fields = '__all__'
 
 class LaptobDescriptionSerailzer(serializers.ModelSerializer):
     class Meta:

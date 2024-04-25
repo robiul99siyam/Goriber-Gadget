@@ -1,10 +1,17 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import GamingAndLoptob,BusineesClassLoptob,ultraBook,ProductBrand,laptob_and_destop_productAdd,LaptobDescriptionModel,LaptobSpecificaionModel
-from .serializer import GamingAndlaptopSerializer,BusineesClassLoptobSerializer,ultraBookSerializer,ProductBrandSerializer,laptob_and_destop_productAddSerializer,LabtobSpecificationSerializer,LaptobDescriptionSerailzer
+from .models import GamingAndLoptob,BusineesClassLoptob,ultraBook,ProductBrand,laptob_and_destop_productAdd,LaptobDescriptionModel,LaptobSpecificaionModel,Macbook
+
+
+from .serializer import GamingAndlaptopSerializer,BusineesClassLoptobSerializer,ultraBookSerializer,ProductBrandSerializer,laptob_and_destop_productAddSerializer,LabtobSpecificationSerializer,LaptobDescriptionSerailzer,MackBookSerializer
 from rest_framework import filters
 from conver_and_glass.views import All_pagination
 from django.http import Http404
+
+
+class MackBookViewset(viewsets.ModelViewSet):
+    queryset = Macbook.objects.all()
+    serializer_class = MackBookSerializer
 
 
 class LaptobSpecifationViewset(viewsets.ModelViewSet):

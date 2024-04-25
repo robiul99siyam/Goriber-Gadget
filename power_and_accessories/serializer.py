@@ -1,4 +1,4 @@
-from .models import powerAndaccessories,PowerProductBrand,cableAndinternconnectProductAdd,PowerAndaccessoriesSpecificaionModel,powerAndaccessoriesDescriptionModel
+from .models import powerAndaccessories,PowerProductBrand,cableAndinternconnectProductAdd,PowerAndaccessoriesSpecificaionModel,powerAndaccessoriesDescriptionModel,cableAndinternconnect
 from rest_framework import serializers
 
 
@@ -9,6 +9,10 @@ class PowerAndaccessoriesSpecificaionSerializer(serializers.ModelSerializer):
 
 
         
+class CableAndInternet(serializers.ModelSerializer):
+    class Meta:
+        model = cableAndinternconnect
+        fields = '__all_'
 
 
 class powerAndaccessoriesDescriptionSerailzer(serializers.ModelSerializer):

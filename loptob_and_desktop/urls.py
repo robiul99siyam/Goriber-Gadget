@@ -4,6 +4,7 @@ from . import views
 
 
 router = DefaultRouter()
+router.register("MackBook",views.MackBookViewset)
 router.register("ultraBook",views.ultraBookViewsets)
 router.register("laptob/prodcut/barnad",views.ProductBrandViewsets)
 router.register("BussinessClassLoptob",views.BusineesClassLoptobViewsets)
