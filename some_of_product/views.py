@@ -45,6 +45,7 @@ class featureProductViewset(viewsets.ModelViewSet):
     
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
+        print(queryset)
         serializer = self.get_serializer(queryset, many=True)
         for product in serializer.data:
          
