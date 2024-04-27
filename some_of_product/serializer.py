@@ -1,4 +1,4 @@
-from .models import BennerSection,featured_category,feature_product,ReadyOfOrder
+from .models import BennerSection,featured_category,FeatureProduct,ReadyOfOrder
 from rest_framework import serializers
 
 
@@ -13,14 +13,15 @@ class feature_categroySerailzer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class feature_prodcutSerializer(serializers.ModelSerializer):
-
+class FeatureProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = feature_product
+        model = FeatureProduct
+        fields = "__all__"
+
+class ReadyOfOrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ReadyOfOrder
         fields = "__all__"
 
 
-class ReadyofOrderseriailzer(serializers.ModelSerializer):
-    class Meta:
-        model = ReadyOfOrder
-        fields = '__all__'
+
